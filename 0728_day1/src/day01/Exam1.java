@@ -25,7 +25,7 @@ public class Exam1 {
     
     public static void main(String[] args) {
 
-        int b = 10;
+        
         // ** [main 함수 안 ] 선언 / 만들기 , 실행문 가능
         //[2] 콘솔 출력문 실행하기 
         // so + 엔터 : System.out.println();
