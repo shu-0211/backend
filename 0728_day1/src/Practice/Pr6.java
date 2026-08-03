@@ -69,7 +69,7 @@ public class Pr6 {
         System.out.printf(" 가장 큰수는 %d입니다. ",max);
         */
 
-        /* 
+        /*
         // 문제 8
         Scanner scan = new Scanner(System.in);
         String[] products = {"볼펜", "노트", "지우개"};
@@ -77,7 +77,7 @@ public class Pr6 {
         System.out.print("상품명을 입력해주세요 :"); String product =  scan.next();
         System.out.println();
         for(String i : products){
-            if( product == product){ 
+            if( product.equals(i)){ 
                 System.out.println("구매 수량를 입력해주세요"); int price = scan.nextInt();
                 for( int j : stock){
                     if(price < j){
@@ -86,10 +86,17 @@ public class Pr6 {
                         System.out.println("재고가 부족합니다. ");
                         return;
                     }
-                }
-                System.out.println("없는 제품명 입니다. ");    
+                }  
             }
-    
+        }
+        */
+        
+
+        // 8번 다른 방법 
+        /*
+        boolean find = false ; // 초기값 
+        if( 상품명.equals(products[index] ) ){
+            find = ture; 
         }
         */
 
