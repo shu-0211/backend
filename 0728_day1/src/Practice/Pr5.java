@@ -106,7 +106,7 @@ public class Pr5 {
         int july4 = 11738700;
         int [] ary = { july1 , july2, july3 , july4};
         int week = 1;
-
+-
         for ( int i : ary){
             String str = "";
             for(int j = 1 ; j <= i/1000000 ; j++){
