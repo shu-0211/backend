@@ -1,5 +1,6 @@
 package Practice;
 
+import java.net.Socket;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -145,6 +146,20 @@ public class Pr6 {
             }
         }
         */
+       // 문제 10 코드 줄이기 
+       String[] carNumbers = {"210어7125", "142가7415", "888호8888", "931나8234" , "931나8284"};
+        int[] usageMinutes = {65, 30, 140, 420 , 10};
+       for ( int i = 0 ; i < carNumbers.length ; i++){
+            System.out.print(carNumbers[i] + ": ");
+            System.out.print(usageMinutes[i] + "분 ");
+
+            int fee = 1000; // 기본요금 
+            if ( usageMinutes[i] > 30){
+                fee += (usageMinutes[i]-30) /10 *500;
+                fee = fee>20000 ? 20000 : fee;
+            }
+            System.out.println(fee + " 원 ");
+       }
 
 
     }
