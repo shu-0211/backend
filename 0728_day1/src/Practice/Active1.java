@@ -2,7 +2,7 @@ package Practice;
 
 import java.util.Scanner;
 
-public class Active {
+public class Active1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int size = 0 ;   // 고정길이 배열에서 사용자에게 몇번째 배열까지 썻는지 보여주기 위한 변수
@@ -51,8 +51,11 @@ public class Active {
                     break;
             }
 
-
         }
 
     }
 }
+/*
+
+
+*/
