@@ -109,6 +109,7 @@ public class Pr7 {
         }
         */
 
+        /* 
         // 문제 9
         MenuItem m1 = new MenuItem();
         MenuItem m2 = new MenuItem();
@@ -116,10 +117,29 @@ public class Pr7 {
         m1.name = "김치찌개"; m1.price = 8000; m1.isSignature = true;
         m2.name = "된장찌개"; m2.price = 8000; m2.isSignature = false;
         m3.name = "계란찜"; m3.price = 3000; m3.isSignature = false;
-        if(int i = 1 ; i <= 3; i++){
-            mi.
+        if (m1.isSignature) {
+            System.out.printf("[대표메뉴] %s : %d원\n", m1.name, m1.price);
         }
-        
+
+        if (m2.isSignature) {
+            System.out.printf("[대표메뉴] %s : %d원\n", m2.name, m2.price);
+        }
+
+        if (m3.isSignature) {
+            System.out.printf("[대표메뉴] %s : %d원\n", m3.name, m3.price);
+        }
+        */
+
+        /* 
+        // 문제 10 
+        UserProfile u1 = new UserProfile();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("이름를 입력하세요 "); u1.name = scan.next();
+        System.out.print("나이를 입력하세요 "); u1.age = scan.nextInt();
+        System.out.print("mbti를 입력하세요 "); u1.mbti = scan.next();
+        System.out.println("--- 프로필 ---");
+        System.out.printf("이름 : %s 나이 : %d mbti : %s ",u1.name,u1.age,u1.mbti);
+        */
 
 
     }
@@ -176,4 +196,10 @@ class MenuItem{
     String name;
     int price;
     Boolean isSignature;
+}
+
+class UserProfile {
+    String name;
+    int age;
+    String mbti;
 }

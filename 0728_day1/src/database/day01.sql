@@ -8,7 +8,7 @@
 -- [1] SQL 문법 작성, 2. 세미콜론 ; 마침 ,  3. 실행할 SQL 문법에 커서 두고 CTRL+엔터 또는 run
 
 
-SHOW DATABASE; -- 연결된 DB 서버내 모든 데이터베이스 목록 확인
+SHOW DATABASES; -- 연결된 DB 서버내 모든 데이터베이스 목록 확인
 
 
 -- [2] 데이터베이스 로컬 경로
@@ -20,7 +20,7 @@ CREATE DATABASE mydb0804;
 
 -- [4] 데이터베이스 삭제 , 주의할점 : 없는 데이터베이스명 삭제 불가능
 DROP DATABASE mydb0804;
-DROP DATABASE IF EXISTS mydb0804;
+DROP DATABASE IF EXISTS mydb0804;  -- if exists 존재하면 삭제 , 주의할 점 : 없는 데이터명이면 삭제 불가능 ㄴ
 
 -- [5] 데이터베이스 활성화 : 연결된 DB 서버내 여러개 DB 중 조작할 DB 선택
 USE mydb0804;
