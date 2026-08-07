@@ -65,6 +65,8 @@ public class Pr9 {
     } // main end 
 }
 
+/* 
+
 class PrintMessage{
     void PM(){
         System.out.println("안녕하세요 메소드입니다.");
@@ -77,7 +79,7 @@ class Greeter{
     Greeter(String name){
         this.name = name;
     }
-    */
+    
 
     void greet(String name){
         System.out.printf("안녕하세요, [%s]님!", name);
@@ -168,3 +170,5 @@ class ParkingLot{
         else{System.out.println("1,000원");}
     }
 }
+
+*/
