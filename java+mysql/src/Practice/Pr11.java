@@ -53,7 +53,8 @@ public class Pr11 {
         Book b3 = new Book("3번","3번책");
         library.addAll(List.of(b1,b2,b3));
         for(Book bo : library){
-            System.out.printf("제목 : %s  저자 : %s\n",bo.getTitle(),bo.getAuthor());
+            System.out.println(bo.toString());
+            // System.out.printf("제목 : %s  저자 : %s\n",bo.getTitle(),bo.getAuthor());
         }
 
 
@@ -106,6 +107,11 @@ class Book{
     }
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString(){
+        return "제목 : " + this.title + "    저자 : " + this.author;
     }
 
     
