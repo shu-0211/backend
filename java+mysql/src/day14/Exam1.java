@@ -1,0 +1,68 @@
+package day14;
+
+import java.util.ArrayList;
+
+public class Exam1 {
+    public static void main(String[] args) {
+
+        // 1] 클래스내 객체 맴버변수 동일한 타입으로 값 대입
+        Box1 box1 = new Box1();
+        box1.content = "안녕하세요";
+
+        // 2] String 대신에 int 타입으로 값 대입??? 새로운 클래스 만든다. 
+        Box2 box2 = new Box2();
+        box2.content = 10; // 동일한 맴버 변수간 서로 다른 타입 불가능??
+
+        // 3] 해결방안? 제네릭 이용한 동일한 맴버변수간 서로 다른 타입 사용.
+        Box3<String> box3 = new Box3<String>();   // 생성자 뒤에 제네릭 생략 가능
+        box3.content = "안녕하세요";
+        Box3<Integer> box33 = new Box3<Integer>();
+        box33.content = 10;
+
+        // - 제네릭 타입 대신에 Object 로 사용시에는 타입변환 필요
+        ArrayList<String> list1 = new ArrayList<>(); // < 제네릭 > String 타입으로 배열 선언
+        String[] list2 = new String[10];
+
+        // 4] 2개 이상의 제네릭 타입 가능
+        Box4 <String , Integer> box4 = new Box4();
+        box4.value1 = "안녕하세요."; box4.value2 = 10;
+
+        // 5] 중첩 가능 
+        Box4< String , ArrayList < Integer > > box44 = new Box4();
+        box44.value1 = "안녕하세요"; box44.value2 = new ArrayList<Integer>();
+
+        // *] 활용처 : 컬렉션 프레임워크 ( ArrayList )
+        // 6] 메소드 제네릭 가능 
+        Box3<String> box333 = Util.boxing("사과");
+        System.out.println(box33.content);
+
+        // 7] 상속관계 제약  , < 타입 extends 상위타입 > 
+        // < T extends Number> 예시로 이렇게 쓰면 T 제네릭 타입에는 Number에 자식 타입만 제네릭타이브로 올 수 있다. 
+        // Box5<String> box5 = new Box5();   - > 오류
+        Box5<Integer> box5 = new Box5();  // 오버라이딩호환을 하기위해 상속관계로 제약을 준다. 
+
+    }
+}
+/* 
+    제네릭 타입
+        정의 : 여러가지 타입에서 동작할 수 있도록 만든 타입
+        목적 : 클래스 정의할때 타입 정하지 않고 사용자(개발자)가 사용할 때 타입 정한다. 
+        사용법 : 
+            1) 제네릭 타입은 영 대문자로 한다.
+            2) 여러개 가능한다. 
+            3) 기본타입 불가능하므로 래퍼클래스 사용한다. 
+
+*/
+class Box5 < T extends Number> { T content; }
+class Util{
+    public static <T> Box3<T> boxing( T 매개변수){  // 메소드의 타입들을 제네릭 타입 가능 
+        Box3<T> box = new Box3<>();
+        box.content = 매개변수;
+        return box;
+
+    }
+}
+class Box4 < T , E > { T value1 ; E value2;}
+class Box1{ String content;}
+class Box2{ int content;}
+class Box3 < 제네릭타입 >{ 제네릭타입 content; }
